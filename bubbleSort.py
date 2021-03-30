@@ -7,6 +7,7 @@ def bubbleSort(array):
     Returns:
         list: ordered copy array
     """
+    array = array.copy()
     n = len(array)
     sort = False
     while not sort:
@@ -16,16 +17,3 @@ def bubbleSort(array):
                 array[i], array[i+1] = array[i+1], array[i]
                 sort = False
     return array
-
-# array original
-array = [5, 4, 6, 2, 1, 7, 0, 3, 8, 9]
-# gabarito
-gabarito = array.copy()
-gabarito.sort()
-# resultado
-array_bubble = bubbleSort(array)
-
-# saida
-print("Array Original:  ", array)
-print("Array Gabarito:  ", gabarito)
-print("Array Bubble:    ", array_bubble)
