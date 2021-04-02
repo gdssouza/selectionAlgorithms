@@ -1,4 +1,4 @@
-def bubbleSort(array):
+def bubbleSort(array, reverse = False):
     """Bubble sorting algorithm 
 
     Args:
@@ -13,7 +13,8 @@ def bubbleSort(array):
     while not sort:
         sort = True
         for i in range(n-1):
-            if array[i] > array[i+1]:
+            if  (not reverse and array[i] > array[i+1]) or\
+                (reverse and array[i] < array[i+1]):
                 array[i], array[i+1] = array[i+1], array[i]
                 sort = False
     return array
